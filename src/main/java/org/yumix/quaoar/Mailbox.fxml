@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="org.yumix.quaoar.MailboxController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Button fx:id="write" layoutX="254.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickWrite" text="Write" />
+    <Button fx:id="read" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickRead" text="Read" />
+  </children>
+</AnchorPane>
