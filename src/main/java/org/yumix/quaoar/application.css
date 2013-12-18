@@ -1,0 +1,3 @@
+.root { -fx-background-image: url('./background.png'); }
+.button { -fx-background-color: transparent; }
+.button#write { -fx-background-image: url('./write-button.png'); }

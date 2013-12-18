@@ -5,21 +5,18 @@ import javax.inject.Inject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.text.TextFlow;
 
 public class MailboxController {
 	@Inject
 	private Mailbox mailbox;
 	
 	@FXML
-	private Button read;
+	private ListView<TextFlow> receivedMails;
 	
 	@FXML
 	private Button write;
-	
-	@FXML
-	public void onClickRead(ActionEvent event) {
-		mailbox.select("Read");
-	}
 	
 	@FXML
 	public void onClickWrite(ActionEvent event) {
