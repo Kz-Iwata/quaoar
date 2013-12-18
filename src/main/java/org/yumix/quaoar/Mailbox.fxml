@@ -9,12 +9,13 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="320.0" style="" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="org.yumix.quaoar.MailboxController">
   <!-- TODO Add Nodes -->
   <children>
-    <Button fx:id="write" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickWrite" prefHeight="32.0" prefWidth="32.0" style="" text="" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0" />
-    <Label layoutX="118.0" layoutY="14.0" text="受信トレイ" textAlignment="CENTER" textFill="WHITE">
+    <Label layoutX="118.0" layoutY="14.0" styleClass="title" text="受信トレイ" textAlignment="CENTER" textFill="WHITE">
       <font>
         <Font name="SansSerif Bold" size="20.0" />
       </font>
     </Label>
+    <Button fx:id="write" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickWrite" prefHeight="32.0" prefWidth="32.0" style="" text="" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0" />
+    <ListView prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0" />
   </children>
   <stylesheets>
     <URL value="@application.css" />
