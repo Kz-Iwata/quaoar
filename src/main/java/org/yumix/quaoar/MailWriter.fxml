@@ -2,19 +2,68 @@
 
 <?import java.lang.*?>
 <?import java.net.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="org.yumix.quaoar.MailWriterController">
   <!-- TODO Add Nodes -->
   <children>
-    <Label layoutX="103.0" layoutY="14.0" text="新規メッセージ" textAlignment="CENTER" textFill="WHITE">
+    <Label layoutX="100.0" layoutY="11.0" styleClass="title" text="新規メッセージ" textAlignment="CENTER" textFill="WHITE">
       <font>
-        <Font name="SansSerif Bold" size="20.0" />
+        <Font name="SansSerif Regular" size="20.0" />
       </font>
     </Label>
+    <Button fx:id="send" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickSend" prefHeight="32.0" prefWidth="50.0" text="" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
+    <Button fx:id="cancel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="32.0" prefWidth="82.0" text="" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+    <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+      <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="26.000099999997474" prefWidth="296.0">
+          <children>
+            <Label prefHeight="24.0" prefWidth="60.0" text="宛先:">
+              <font>
+                <Font name="SansSerif Regular" size="16.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color blue="0.500" green="0.500" red="0.500" fx:id="x2" />
+              </textFill>
+            </Label>
+            <TextField alignment="BASELINE_LEFT" prefHeight="24.0" prefWidth="240.0" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="240.0">
+          <children>
+            <Label font="$x1" prefHeight="24.0" prefWidth="60.0" text="Cc:" textFill="$x2" />
+            <TextField maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="240.0" />
+          </children>
+        </HBox>
+        <HBox prefHeight="26.0" prefWidth="296.0">
+          <children>
+            <Label font="$x1" prefHeight="24.0" prefWidth="60.0" text="Bcc:" textFill="$x2" />
+            <TextField prefHeight="24.0" prefWidth="240.0" />
+          </children>
+        </HBox>
+        <HBox prefHeight="26.0" prefWidth="296.0">
+          <children>
+            <Label font="$x1" prefHeight="24.0" prefWidth="60.0" text="差出人:" textFill="$x2" />
+            <TextField prefHeight="24.0" prefWidth="240.0" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="296.0">
+          <children>
+            <Label font="$x1" prefHeight="24.0" prefWidth="60.0" text="件名:" textFill="$x2" />
+            <TextField prefHeight="24.0" prefWidth="240.0" />
+          </children>
+        </HBox>
+        <TextArea prefHeight="209.0" prefWidth="296.0" wrapText="true" />
+      </children>
+      <padding>
+        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+      </padding>
+    </VBox>
   </children>
   <stylesheets>
     <URL value="@application.css" />
