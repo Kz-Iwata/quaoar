@@ -12,7 +12,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
-public class Mailbox {
+public class QuaoarRunner {
 	@Inject
 	private FXMLLoader loader;
 	

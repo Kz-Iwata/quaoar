@@ -6,13 +6,13 @@ import org.jboss.weld.environment.se.WeldContainer;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class QuaoarApplication extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		Weld weld = new Weld();
 		WeldContainer container = weld.initialize();
-		Mailbox mailbox = container.instance().select(Mailbox.class).get();
-		mailbox.start(primaryStage);
+		QuaoarRunner quaoarRunner = container.instance().select(QuaoarRunner.class).get();
+		quaoarRunner.start(primaryStage);
 		weld.shutdown();
 	}
 	

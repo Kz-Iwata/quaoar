@@ -10,7 +10,7 @@ import javafx.scene.text.TextFlow;
 
 public class MailboxController {
 	@Inject
-	private Mailbox mailbox;
+	private QuaoarRunner quaoarRunner;
 	
 	@FXML
 	private ListView<TextFlow> receivedMails;
@@ -20,6 +20,6 @@ public class MailboxController {
 	
 	@FXML
 	public void onClickWrite(ActionEvent event) {
-		mailbox.select("Write");
+		quaoarRunner.select("Write");
 	}
 }
