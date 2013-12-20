@@ -1,9 +1,7 @@
 package org.yumix.quaoar;
 
 import java.io.IOException;
-import java.io.InputStream;
 
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -11,21 +9,52 @@ import javafx.stage.Stage;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import org.yumix.quaoar.qualifier.MailReaderRootPane;
+import org.yumix.quaoar.qualifier.MailWriterRootPane;
+import org.yumix.quaoar.qualifier.MailboxRootPane;
+import org.yumix.quaoar.qualifier.PrimaryStage;
+
 @Singleton
 public class QuaoarRunner {
+	
 	@Inject
-	private FXMLLoader loader;
+	@MailboxRootPane
+	private AnchorPane mailboxRootPane;
+	
+	@Inject
+	@MailReaderRootPane
+	private AnchorPane mailReaderRootPane;
+	
+	@Inject
+	@MailWriterRootPane
+	private AnchorPane mailWriterRootPane;
+	
+	@Inject
+	@PrimaryStage
+	private Stage stage;
 	
 	public void start(Stage stage) throws IOException {
-		try (InputStream fxml = getClass().getResourceAsStream("/org/yumix/quaoar/Mailbox.fxml")) {
-			AnchorPane root = loader.load(fxml);
-			Scene scene = new Scene(root);
-			stage.setScene(scene);
-			stage.show();
-		}
+		Scene scene = new Scene(mailboxRootPane, 320, 480);
+		stage.setScene(scene);
+		stage.show();
 	}
 	
-	public void select(String s) {
-		System.out.println(s);
+	public void select(WhichScene whichScene) {
+		switch (whichScene) {
+		case MAILBOX:
+			System.out.println(mailboxRootPane);
+			stage.getScene().setRoot(mailboxRootPane);
+			break;
+		case MAIL_READER:
+			System.out.println(mailReaderRootPane);
+			stage.getScene().setRoot(mailReaderRootPane);
+			break;
+		case MAIL_WRITER:
+			System.out.println(mailWriterRootPane);
+			stage.getScene().setRoot(mailWriterRootPane);
+			break;
+		default:
+			break;
+		}
 	}
 }

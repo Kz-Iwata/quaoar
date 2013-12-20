@@ -66,6 +66,6 @@
     </VBox>
   </children>
   <stylesheets>
-    <URL value="@application.css" />
+    <URL value="@/org/yumix/quaoar/application.css" />
   </stylesheets>
 </AnchorPane>
