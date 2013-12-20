@@ -26,7 +26,7 @@ public class QuaoarApplication extends Application {
 		Weld weld = new Weld();
 		WeldContainer container = weld.initialize();
 		QuaoarRunner quaoarRunner = container.instance().select(QuaoarRunner.class).get();
-		quaoarRunner.start(primaryStage);
+		quaoarRunner.start();
 		weld.shutdown();
 	}
 	

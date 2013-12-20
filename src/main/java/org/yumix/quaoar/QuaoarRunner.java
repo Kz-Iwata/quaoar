@@ -33,7 +33,7 @@ public class QuaoarRunner {
 	@PrimaryStage
 	private Stage stage;
 	
-	public void start(Stage stage) throws IOException {
+	public void start() throws IOException {
 		Scene scene = new Scene(mailboxRootPane, 320, 480);
 		stage.setScene(scene);
 		stage.show();
