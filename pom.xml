@@ -39,7 +39,7 @@
   	<dependency>
   		<groupId>org.yumix</groupId>
   		<artifactId>growslowly</artifactId>
-  		<version>0.7.0</version>
+  		<version>[0.7,)</version>
   	</dependency>
   </dependencies>
 </project>
